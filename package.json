@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/bob737373/GitBan/issues"
   },
-  "homepage": "https://github.com/bob737373/GitBan#readme"
+  "homepage": "https://github.com/bob737373/GitBan#readme",
+  "dependencies": {
+    "font-awesome": "^4.7.0"
+  }
 }
