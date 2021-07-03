@@ -1,0 +1,33 @@
+:root {
+
+}
+
+html {
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: grey;
+}
+
+.flex-column-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.logo {
+    width: 100px;
+    height: 100px;
+}
+
+.title {
+    background: lightgrey;
+    text-align: center;
+}
+
+.big-btn {
+    padding: 4rem;
+    background: lightgrey;
+    width: 20rem;
+    text-align: center;
+}
