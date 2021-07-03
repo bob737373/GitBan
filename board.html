@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <link rel="stylesheet" href="./node_modules/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="./src/css/board.css">
 
     <title>Kanban Board</title>
@@ -13,8 +14,8 @@
     <header class="page-header">
         <nav class="navbar flex-container">
             <div class="header-container">
-                <button class="header-btn home-btn">Home</button>
-                <button class="header-btn board-list-btn">My Boards</button>
+                <button class="header-btn home-btn"><i class="fas fa-home" aria-label="Go To Home"></i></button>
+                <button class="header-btn board-list-btn"><i class="fas fa-th-list" aria-label="My Boards"></i></button>
                 <button class="header-btn new-board-btn">New...</button>
             </div>
             <div class="title header-container">
@@ -24,7 +25,7 @@
             <div class="header-container">
                 <button class="header-btn info-btnt">Info</button>
                 <button class="header-btn notifications-btn">Notifications</button>
-                <button class="header-btn profile-btn"><img src="default-profile.jpg" alt="Profile"></button>
+                <button class="profile-btn"><img class="profile-pic" src="https://picsum.photos/100/100" alt="Profile"></button>
             </div>
         </nav>
     </header>
@@ -32,7 +33,8 @@
     <div class="board">
         <header class="board-opts flex-container">
             <div class="header-container">
-                <h2 class="board-opts-title">Example Board</h2>
+                <h3 class="board-opts-title">Example Board</h2>
+                <div class="board-opts-divider">|</div>
                 <div class="board-opts-members">
                     <div class="member">
                         <img src="default-profile.jpg" alt="Default Profile Image">
@@ -41,11 +43,11 @@
                     <button class="board-opts-btn">Invite</button>
                 </div>
             </div>
-            
             <div class="header-container"><button class="board-opts-btn">Options</button></div>
         </header>
 
-        <div class="list-container">
+
+        <div id="list-container">
             <div class="list">
                 <div class="list-title"><h3>Example List</h3></div>
                 <div class="list-card">
@@ -55,6 +57,8 @@
                 </div>
             </div>
         </div>
+
+
     </div>
 </body>
 </html>
