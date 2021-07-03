@@ -10,6 +10,10 @@ for (let i = 0; i<5; i++){ //iterate over the board list
     document.getElementById("boardslist").appendChild(newBoard)   
 }
 
+function to_home(){
+    window.location.href = "index.html"
+}
+
 function open_board(){
     window.location.href = "board.html"
 }
