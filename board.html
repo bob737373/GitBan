@@ -37,7 +37,7 @@
                 <div class="board-opts-divider">|</div>
                 <div class="board-opts-members">
                     <div class="member">
-                        <img src="default-profile.jpg" alt="Default Profile Image">
+                        <div class="profile-pic-container"><img class="profile-pic" src="https://picsum.photos/100/100" alt="Profile Image"></div>
                         <span class="member-type admin" title="This member is an admin of this board." aria-label="This member is an admin of this board."></span>
                     </div>
                     <button class="board-opts-btn">Invite</button>
@@ -47,14 +47,25 @@
         </header>
 
 
-        <div id="list-container">
+        <div id="list-container flex-container">
             <div class="list">
                 <div class="list-title"><h3>Example List</h3></div>
-                <div class="list-card">
-                    <p class="list-card-text">
-                        Do some stuff
-                    </p>
-                </div>
+                    <div class="list-card-container flex-container">
+                        <div class="list-card">
+                            <h4 class="list-card-title">Card Title</h4>
+                            <p class="list-card-text">
+                                Card description text
+                            </p>
+                            <a href="https://github.com/" class="list-card-btn list-card-gh-branch">GitHub Branch</a>
+                        </div>
+
+                        <div class="list-card">
+                            <h4 class="list-card-header">Card Title</h4>
+                            <p class="list-card-text">
+                                Card description text
+                            </p>
+                        </div>
+                    </div>
             </div>
         </div>
 

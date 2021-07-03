@@ -37,8 +37,20 @@ h2 {
     margin: 0;
 }
 
+h3 {
+    margin: 0;
+}
+
+h4 {
+    margin: 0;
+}
+
 .flex-container {
     display: flex;
+}
+
+.profile-pic-container {
+
 }
 
 .profile-pic {
@@ -134,4 +146,45 @@ h2 {
 /*--------------------
     List Styles
 --------------------*/
+.list-container {
+    flex-direction: column;
+}
 
+.list {
+    margin-left: 1rem;
+}
+
+.list-title {
+    background: rgb(105, 105, 105);
+    width: max-content;
+    padding: 0.5rem 0.5rem;
+}
+
+.list-card-container {
+    padding: 10px;
+    width: max-content;
+    background: rgb(105, 105, 105);
+    gap: 15px;
+}
+
+.list-card {
+    width: 15rem;
+    height: 20rem;
+    background: grey;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.list-card > * {
+    margin: 0.25rem;
+}
+
+.list-card-title {
+}
+
+.list-card-text {
+}
+
+.list-card-btn {
+    text-decoration: none;
+    color: inherit; 
+}
