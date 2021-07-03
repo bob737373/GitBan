@@ -5,10 +5,35 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <link rel="stylesheet" href="./src/css/style.css">
+    <link rel="stylesheet" href="./src/css/myboards.css">
     
     <title>GitBan | My Boards</title>
 </head>
-<body>    
+<body>   
+    <header class="page-header" >
+        <nav class="flex-container">
+            <div class="header-container">
+                <button class="header-btn home-btn">Home</button>
+                <button class="header-btn new-board-btn">Add Board</button>
+                <select name="Sort by" id="sortby">
+                    <option value="alphabetical">Alphabetical</option>
+                    <option value="commit">Recent Commits</option>                
+                </select>
+            </div>
+            <div class="title header-container">
+                <img src="./assets/img/GitBanLogo.svg" alt="GitBan Logo" width=25 height=25>
+                <h2 class="header-title">GitBan</h2>
+            </div>
+            <div class="header-container">
+                <button class="header-btn info-btnt">Info</button>
+                <button class="header-btn notifications-btn">Notifications</button>
+                <button class="header-btn profile-btn"><img src="default-profile.jpg" alt="Profile"></button>
+            </div>
+        </nav>
+    </header>
+
+    <div id="boardslist" class='flex-container'></div>
+    
+    <script src="./src/js/myboards.js"></script>
 </body>
 </html>

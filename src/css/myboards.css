@@ -1,0 +1,63 @@
+  :root {
+
+}
+
+html {
+    font-family: Arial, sans-serif;
+    background: grey;
+}
+
+body {
+    margin: 0;
+}
+
+header {
+    width: 100%;
+}
+
+.flex-container {
+    display: flex;
+}
+
+.flex-board {
+    flex: 1;
+    border: 2px solid yellow;
+}
+
+/*--------------------
+    Page Head Styles
+--------------------*/
+nav {
+    padding: 5px;
+    justify-content: space-between;
+    width: 100%;
+    background: rgb(0, 0, 0, 0.3);
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+}
+
+
+/*--------------------
+    Board Head Styles
+--------------------*/
+.board-header {
+    padding: 10px;
+    display: flex;
+}
+
+.board-opts {
+    justify-content: space-between;
+}
+
+.board-opts-members {
+    display: flex;
+    align-items: center;
+}
+
+/*--------------------
+    List Styles
+--------------------*/
+
