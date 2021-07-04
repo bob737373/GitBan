@@ -5,21 +5,36 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="./src/css/style.css">
+    <link rel="stylesheet" href="./node_modules/@fortawesome/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="./src/css/index.css">
 
     <title>GitBan | Homepage</title>
 </head>
-<body>
-    <div class="flex-column-container">
-        <header>
-            <img src="./assets/img/GitBanLogo.svg" alt="GitBan Logo" class="logo">
-            <h1 class="title">GitBan</h1>
-        </header>
-        <div class="big-btn" id="viewboardsbtn">
-            <input type="button" value="View my boards" onclick="page_change()"> 
-        </div>
-    </div>
 
+<body>    
+    <header class="page-header">
+        <nav class="navbar flex-container">
+            <div class="header-container">
+                <button class="header-btn home-btn"><i class="fas fa-home" aria-label="Go To Home"></i></button>
+                <button class="header-btn board-list-btn"><i class="fas fa-th-list" aria-label="My Boards"></i></button>
+                <button class="header-btn new-board-btn">New...</button>
+            </div>
+            <div class="title header-container">
+                <img src="./assets/img/GitBanLogo.svg" alt="GitBan Logo" width=35 height=35>
+                <h2 class="header-title">GitBan</h2>
+            </div>
+            <div class="header-container">
+                <button class="header-btn info-btnt"><i class="fas fa-info-circle" aria-label="Info"></i></button>
+                <button class="header-btn notifications-btn"><i class="far fa-bell" aria-label="Notifications"></i></button>
+                <button class="profile-btn"><img class="profile-pic" src="https://picsum.photos/100/100" alt="Profile"></button>
+            </div>
+        </nav>
+    </header>
+    
+    <div class="big-btn" id="viewboardsbtn">
+            <input type="button" value="View my boards" onclick="page_change()"> 
+    </div>
+    
     <script src="./src/js/index.js"></script>
 </body>
 </html>

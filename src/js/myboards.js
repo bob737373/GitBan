@@ -1,7 +1,7 @@
 //Eventually need an array of boards from backend 
 
 //Programmatically add boards to the boards list
-for (let i = 0; i<5; i++){ //iterate over the board list
+for (let i = 0; i<10; i++){ //iterate over the board list
     let newBoard = document.createElement('div')
     newBoard.classList.add('flex-board')
     const p = document.createElement('p')
