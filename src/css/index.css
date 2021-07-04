@@ -104,3 +104,26 @@ h4 {
     height: 2.2rem;
     width: 2.2rem;
 }
+
+/*--------------------
+    Sign In Box Styles
+--------------------*/
+
+.sign-in-box{
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -200px;
+    margin-top: -250px;
+    width: 400px;
+    height: 500px;
+    background: grey;
+}
+
+.sign-in-label{
+    position: absolute;
+    left: 50%;
+    margin-left: -70px;
+    width: 140px;
+    text-align: center;
+}
