@@ -4,6 +4,7 @@
   "description": "Kanban board with GitHub integration",
   "main": "index.js",
   "scripts": {
+    "start-server": "nodemon ./src/js/app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -17,6 +18,8 @@
   },
   "homepage": "https://github.com/bob737373/GitBan#readme",
   "dependencies": {
-    "@fortawesome/fontawesome-free": "^5.15.3"
+    "@fortawesome/fontawesome-free": "^5.15.3",
+    "express": "^4.17.1",
+    "nodemon": "^2.0.9"
   }
 }
