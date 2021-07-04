@@ -1,0 +1,16 @@
+{
+    "security": {
+        "oauth2": {
+            "client": {
+                "registration": {
+                    "clientId": "befb52c1028b5cda94d4",
+                    "clientSecrets": "b194cee4facbbcb10efe0bcd83fd1f47390b6187",
+                    "scope": {
+                        "user": "email",
+                        "read": "user"
+                    }
+                }
+            }
+        }
+    }
+}
