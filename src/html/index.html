@@ -4,13 +4,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <link rel="stylesheet" href="../@fortawesome/fontawesome-free/css/all.min.css"> <!--Actually in node_modules-->
-    <link rel="stylesheet" href="../css/myboards.css">
-    
-    <title>GitBan | My Boards</title>
+
+    <link rel="stylesheet" type="text/css" href="./@fortawesome/fontawesome-free/css/all.min.css"> <!--File Path not accurate to reality due to this page being served with express-->
+    <link rel="stylesheet" type="text/css" href="./css/index.css">
+
+    <title>GitBan | Homepage</title>
 </head>
-<body>   
+
+<body>    
     <header class="page-header">
         <nav class="navbar flex-container">
             <div class="header-container">
@@ -29,9 +30,15 @@
             </div>
         </nav>
     </header>
-
-    <div id="boardslist" class='board-grid'></div>
     
-    <script src="../js/myboards.js"></script>
+    <div class="sign-in-box" >
+        <p class="sign-in-label">Sign In</p>
+    </div>
+
+    <div>
+        <button>View My Boards</button>
+    </div>
+    
+    <script src="./js/index.js"></script>
 </body>
 </html>
