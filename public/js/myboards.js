@@ -11,7 +11,7 @@ for (let i = 0; i<25; i++){ //iterate over the board list
 }
 
 function to_home(){
-    window.location.href = "index.html"
+    window.location.href = "../../src/html/index.html"
 }
 
 function open_board(){
