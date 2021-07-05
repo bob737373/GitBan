@@ -9,24 +9,7 @@
     <title>GitBan | My Boards</title>
 </head>
 <body>   
-    <header class="page-header">
-        <nav class="navbar flex-container">
-            <div class="header-container">
-                <button class="header-btn home-btn"><i class="fas fa-home" aria-label="Go To Home"></i></button>
-                <button class="header-btn board-list-btn"><i class="fas fa-th-list" aria-label="My Boards"></i></button>
-                <button class="header-btn new-board-btn">New...</button>
-            </div>
-            <div class="title header-container">
-                <img src="../../public/assets/img/GitBanLogo.svg" alt="GitBan Logo" width=35 height=35>
-                <h2 class="header-title">GitBan</h2>
-            </div>
-            <div class="header-container">
-                <button class="header-btn info-btnt"><i class="fas fa-info-circle" aria-label="Info"></i></button>
-                <button class="header-btn notifications-btn"><i class="far fa-bell" aria-label="Notifications"></i></button>
-                <button class="profile-btn"><img class="profile-pic" src="https://picsum.photos/100/100" alt="Profile"></button>
-            </div>
-        </nav>
-    </header>
+    <%- include('../partials/header'); %>
 
     <div>
         <h1>My Boards</h1>
@@ -36,7 +19,7 @@
         <% boards.forEach(function(board) { %>
             <%- include('../partials/boardpreview', { id: board._id, title: board.title }); %>
         <% }); %>
-        <form action="/" method="POST">
+        <form action="/myboards/new" method="POST">
             <button class="board" type="submit">
                 <h3 class="board-title">Create a new board</h3>
             </button>

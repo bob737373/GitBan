@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../partials/head'); %>
+    <link rel="stylesheet" href="/css/board.css">
+
+    <title>GitBan|Board</title>
+</head>
+<body>
+    <%- include('../partials/header'); %>
+
+    <div class="board">
+        <header class="board-opts flex-container">
+            <div class="header-container">
+                <h3 class="board-opts-title">Example Board</h2>
+                <div class="board-opts-divider">|</div>
+                <div class="board-opts-members">
+                    <div class="member">
+                        <div class="profile-pic-container"><img class="profile-pic" src="https://picsum.photos/100/100" alt="Profile Image"></div>
+                        <span class="member-type admin" title="This member is an admin of this board." aria-label="This member is an admin of this board."></span>
+                    </div>
+                    <button class="board-opts-btn">Invite</button>
+                </div>
+            </div>
+            <div class="header-container"><button class="board-opts-btn"><i class="fas fa-bars" aria-label="Board Options Menu"></i></button></div>
+        </header>
+
+
+        <div id="list-container flex-container">
+            <div class="list">
+                <div class="list-title"><h3>Example List</h3></div>
+                    <div class="list-card-container flex-container">
+                        <div class="list-card">
+                            <h4 class="list-card-title">Card Title</h4>
+                            <p class="list-card-text">
+                                Card description text
+                            </p>
+                            <a href="https://github.com/" class="list-card-btn list-card-gh-branch">GitHub Branch</a>
+                            <div class="list-card-people">People</div>
+                            <button class="list-card-add-people-btn"><i class="fas fa-plus" aria-label="Add people to this card"></i></button>
+                            <div class="list-card-due-date">Due by: </div>
+                            <div class="list-card-labels"></div>
+                            <button class="list-card-add-label-btn"><i class="fas fa-plus" aria-label="Add a label to this card"></i></button>
+                        </div>
+
+                        
+                    </div>
+            </div>
+        </div>
+
+
+    </div>
+</body>
+</html>

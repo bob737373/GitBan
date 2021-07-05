@@ -1,3 +1,6 @@
 <div class="board" id="<%= id %>">
     <h3 class="board-title"><%= title %></h3>
+    <form action="/board/<%= id %>?_method=DELETE" method="POST">
+        <button type="submit">Delete Board</button>
+    </form>
 </div>
