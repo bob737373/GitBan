@@ -8,6 +8,11 @@ const userSchema = mongoose.Schema({ //_id property generated automatically by d
     firstName: String,
     lastName: String,
     avatar: String,
+    private: {
+        type: Boolean,
+        required: true,
+        default: true
+    },
     boards: [{ boardId: String }]
 });
 

@@ -5,7 +5,7 @@ const authcheck = require('../scripts/authcheck');
 
 
 // Get home page
-router.get('/',authcheck.checkAuth, (req, res) => {
+router.get('/', authcheck.checkAuth, (req, res) => {
     res.render('index.ejs', { userId: req.user._id });
 });
 

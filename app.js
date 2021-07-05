@@ -43,6 +43,7 @@ app.use(session({
 }));
 app.use(passport.initialize());
 app.use(passport.session());
+app.use(methodOverride('_method'));
 
 
 // Routes
@@ -52,60 +53,23 @@ app.use('/', homeRouter);
 const loginRouter = require('./src/routes/login');
 app.use('/login', loginRouter);
 
-// app.get('/login', checkNotAuth, (req, res) => {
-//     res.sendFile(path.join(__dirname, '/src/html/login.html'));
-// });
+const logoutRouter = require('./src/routes/logout');
+app.use('/logout', logoutRouter);
 
-//app.get('/auth/github', checkNotAuth, passport.authenticate('github'));
+const usersRouter = require('./src/routes/users');
+app.use('/users', usersRouter);
 
-// app.get('/auth/github/callback', checkNotAuth, 
-//     passport.authenticate('github', {failureRedirect: '/login' }),
-//     (req, res) => {
-//         // Successful authentication, redirect home
-//         res.redirect('/');
-//     }
-// );
+const profileRouter = require('./src/routes/profile');
+app.use('/profile', profileRouter);
 
-app.delete('/logout', (req, res) => {
-    req.logOut();
-    res.redirect('/login');
-});
+const myboardsRouter = require('./src/routes/myboards');
+app.use('/myboards', myboardsRouter);
 
-const subscribersRouter = require('./src/routes/users');
-app.use('/users', subscribersRouter);
-
-app.get('/profile', checkAuth, (req, res) => {
-
-});
-
-app.get('/myboards', checkAuth, (req, res) => {
-
-});
-
-app.get('/board/', checkAuth, (req, res) => {
-
-});
+const boardRouter = require('./src/routes/board');
+app.use('/board', boardRouter);
 
 
-
-
-function checkAuth(req, res, next) {
-    if(req.isAuthenticated()) {
-        return next();
-    }
-
-    res.redirect('/login');
-};
-
-function checkNotAuth(req, res, next) {
-    if(req.isAuthenticated()) {
-        res.redirect('/');
-    }
-    
-    next();
-};
 
 // Server listening on port 3000, basically "starts" server
 const PORT = 3000;
 app.listen(PORT, () => console.log(`Server listening on port ${PORT}`));
-

@@ -16,7 +16,12 @@ router.get('/', async (req, res) => {
 
 // Get a user
 router.get('/:id', getUser, (req, res) => {
-    res.status(200).json(res.user); //200 for everything is good
+    if(res.user.private) {
+        res.render('user.ejs');
+    } else {
+        res.render('privateuser.ejs');
+    }
+    //res.status(200).json(res.user); //200 for everything is good
 });
 
 
@@ -59,7 +64,8 @@ router.patch('/:id', getUser, async (req, res) => { //using patch instead of put
 router.delete('/:id', getUser, async (req, res) => {
     try {
         await res.user.remove();
-        res.status(204).json({ message: `Deleted user with id ${req.params.id}` }); //204 for resource deleted successfully
+        res.redirect('/login');
+        //res.status(204).json({ message: `Deleted user with id ${req.params.id}` }); //204 for resource deleted successfully
     } catch(err) {
         res.status(500).json({ message: err.message });
     }
@@ -68,6 +74,7 @@ router.delete('/:id', getUser, async (req, res) => {
 
 async function getUser(req, res, next) {
     try {
+        console.log(req.params.id);
         user = await User.findById(req.params.id).exec();
         if(!user) {
             return res.status(404).json({ message: 'Cannot find user' }); //404 is could not find status
