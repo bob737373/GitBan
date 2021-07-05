@@ -4,7 +4,7 @@ const KanbanBoardSchema = mongoose.Schema({
     title: String,
     description: String,
     creatorId: { type: String, required: true },
-    members: [{ userId: String }],
+    members: [ String ], //userId
     lists: [{
         title: String,
         cards: [{

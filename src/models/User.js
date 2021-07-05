@@ -13,7 +13,7 @@ const userSchema = mongoose.Schema({ //_id property generated automatically by d
         required: true,
         default: true
     },
-    boards: [{ boardId: String }]
+    boards: [ String ] //boardIds
 });
 
 module.exports = mongoose.model('user', userSchema);

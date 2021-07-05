@@ -16,7 +16,8 @@ function initPassport(passport, getUserById) {
           return done(null, user);
         } else {
           const newUser = await new User({
-            ghid: profile.id
+            ghid: profile.id,
+            boards: []
           }).save();
           return done(null, newUser)
         }
@@ -25,7 +26,7 @@ function initPassport(passport, getUserById) {
 
     //supply user id
     passport.serializeUser((user, done) => {
-      console.log(user.id); 
+      //console.log(user.id); 
       done(null, user.id) 
     });
 
