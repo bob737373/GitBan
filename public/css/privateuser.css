@@ -46,14 +46,7 @@ h4 {
 }
 
 .flex-container {
-    display: flex;    
-}
-
-.flex-board {
-    width: 200px;
-    height: 200px;
-    margin: 10px;
-    border: 2px solid #6AF699;
+    display: flex;
 }
 
 .profile-pic-container {
@@ -110,27 +103,4 @@ h4 {
     vertical-align: middle;
     height: 2.2rem;
     width: 2.2rem;
-}
-
-/*--------------------
-    Page Content Styles
---------------------*/
-
-.boards-header{
-    
-    width: 200;
-    text-align: center;
-}
-
-.board-grid{
-    display:grid;
-    grid-template-columns: 220px 220px 220px 220px 220px 220px;
-    margin: 50px;
-}
-
-.board {
-    width: 200px;
-    height: 200px;
-    margin: 10px;
-    border: 2px solid #6AF699;
 }
