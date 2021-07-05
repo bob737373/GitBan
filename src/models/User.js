@@ -1,21 +1,14 @@
-const mongoose = requires('mongoose');
+const mongoose = require('mongoose');
 
-const UserSchema = mongoose.Schema({
-    id: {
+const userSchema = mongoose.Schema({ //_id property generated automatically by default
+    ghid: {
         type: String,
-        required: true
-    },
-    clientId: {
-        type: String,
-        required: true
-    },
-    deviceCode: {
-        type: String,
-        required: true
+        required: true,
     },
     firstName: String,
     lastName: String,
-    avatar: String
+    avatar: String,
+    boards: [{ boardId: String }]
 });
 
-module.exports = mongoose.model('Users', UserSchema);
+module.exports = mongoose.model('user', userSchema);

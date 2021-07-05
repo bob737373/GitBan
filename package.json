@@ -4,8 +4,8 @@
   "description": "Kanban board with GitHub integration",
   "main": "index.js",
   "scripts": {
-    "start-server": "nodemon ./app.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "devstart": "nodemon ./app.js"
   },
   "repository": {
     "type": "git",
@@ -27,8 +27,10 @@
     "express-session": "^1.17.2",
     "method-override": "^3.0.0",
     "mongoose": "^5.13.2",
-    "nodemon": "^2.0.9",
     "passport": "^0.4.1",
-    "passport-github": "^1.1.0"
+    "passport-github2": "^0.1.12"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.9"
   }
 }
