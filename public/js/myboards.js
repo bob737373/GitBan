@@ -4,9 +4,9 @@
 for (let i = 0; i<25; i++){ //iterate over the board list
     let newBoard = document.createElement('div')   
     newBoard.classList.add('board')  
-    const anchor = document.createElement('anchor')
+    const anchor = document.createElement('a')
     anchor.textContent='eh' 
-    anchor.href("../../src/html/board.html")
+    anchor.href = "../../src/html/board.html";
     newBoard.appendChild(anchor)
     document.getElementById("boardslist").appendChild(newBoard)   
 }

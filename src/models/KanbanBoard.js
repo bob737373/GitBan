@@ -1,13 +1,12 @@
-const mongoose = requires('mongoose');
+const mongoose = require('mongoose');
 
 const KanbanBoardSchema = mongoose.Schema({
-    id: { type: Number, required: true },
-    title: { type: String, required: true },
+    title: String,
     description: String,
-    creator: { userId: Number, required: true },
-    members: [{ userId: Number, required: true }],
+    creatorId: { type: String, required: true },
+    members: [{ userId: String }],
     lists: [{
-        title: { type: String, required: true },
+        title: String,
         cards: [{
             title: String,
             description: String,
@@ -19,4 +18,4 @@ const KanbanBoardSchema = mongoose.Schema({
 
 //In future could add creationDate and lastAccessedDate field to track when boards are unused and delete them after a period of time.
 
-module.exports('KanbanBoards', KanbanBoardSchema);
+module.exports = mongoose.model('KanbanBoard', KanbanBoardSchema);
