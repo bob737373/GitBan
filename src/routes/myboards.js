@@ -38,7 +38,8 @@ router.post('/new', authcheck.checkAuth, async (req, res) => {
             }]
         }]
     }).save();
-    user.boards.push(newBoard._id);
+    //user.boards.push(newBoard._id);
+    const updateRes = await User.updateOne({ _id: user._id }, { boards: [...user.boards, newBoard._id] });
     res.redirect(`/board/${newBoard._id}`);
 });
 

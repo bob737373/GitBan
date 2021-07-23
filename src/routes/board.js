@@ -21,7 +21,7 @@ router.get('/:id', authcheck.checkAuth, async (req, res) => {
     if(userBoards.includes(boardId) || board.members.includes(userId)) {
         res.render('board.ejs', { board: board });
     } else {
-        res.redirect('/myboards/new');
+        res.redirect('/myboards');
     }
 });
 
